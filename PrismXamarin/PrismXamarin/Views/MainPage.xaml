@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismXamarin.Views.MainPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Title}">
+    
+    <StackLayout>
+        <Button Text="Forms" Command="{Binding GotoFormsPage}" />
+        <Button Text="Layouts" Command="{Binding GotoLayoutPage}" />
+        <Button Text="Alert" Command="{Binding GotoAlertPage}" />
+        <Button Text="Binding" Command="{Binding GotoBindingPage}" />
+        
+        <Label Text="Custom" />
+        <Button Text="Calculator" Command="{Binding GotoCalculatorPage}" />
+        <Button Text="Theme" Command="{Binding GotoThemePage}" />
+    </StackLayout>
+</ContentPage>

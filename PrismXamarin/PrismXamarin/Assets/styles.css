@@ -1,0 +1,32 @@
+﻿/* ===== Selecting elements by base class ===== */
+^contentpage {
+    background-color: #EFEFEF;
+}
+
+/* ===== Selecting elements by type ===== */
+button {
+    color: white;
+    background-color: #828282;
+}
+
+/* ===== Selecting elements with a specific class attribute ===== */
+/*.btn {
+    color: white;
+}*/
+
+.btn-primary {
+    color: white;
+    background-color: #0F52BA;
+    padding: 0 20;
+}
+
+.btn-success {
+    color: white;
+    background-color: #43A047;
+    padding: 0 20;
+}
+
+/* ===== Selecting an element by name (StyleId or x:Name) ===== */
+#listView {
+    background-color: lightgray;
+}

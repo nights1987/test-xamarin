@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    
+    <Style x:Key="contentStyle" TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="White" />
+    </Style>
+    <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="White" />
+    </Style>
+    <Style x:Key="buttonStyle" TargetType="Button">
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="BackgroundColor" Value="#0f52ba" />
+    </Style>
+    
+</ResourceDictionary>

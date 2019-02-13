@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="7.1.0.431" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PrismXamarin.Models\PrismXamarin.Models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\PrismStackLayout.xaml.cs" />
+    <Compile Remove="ViewModels\SecondPageViewModel.cs" />
+    <Compile Remove="Events\Test.xaml.cs" />
+    <Compile Remove="Assets\MyPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MainPage.xaml.cs">
+      <DependentUpon>StackLayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Layouts\StackLayoutPage.xaml.cs">
+      <DependentUpon>..\Views\StackLayoutPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Assets\ThemeLight.xaml.cs">
+      <DependentUpon>ThemeLight.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Custom\ThemePage.xaml.cs">
+      <DependentUpon>..\Views\ThemePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\Forms\ButtonPage.xaml.cs">
+      <DependentUpon>..\Views\ButtonPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\PrismStackLayout.xaml" />
+    <EmbeddedResource Remove="Events\Test.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
+    <Folder Include="Views\Layouts\" />
+    <Folder Include="ViewModels\Layouts\" />
+    <Folder Include="Views\Custom\" />
+    <Folder Include="ViewModels\Custom\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Views\Forms\" />
+    <Folder Include="ViewModels\Forms\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismXamarin.Views.Layouts.ScrollViewPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Title}">
+             
+    <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Always">
+        <StackLayout>
+            <BoxView BackgroundColor="Red" HeightRequest="1000" WidthRequest="500" />
+            <BoxView BackgroundColor="Green" HeightRequest="50" WidthRequest="50" />
+            <Entry />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

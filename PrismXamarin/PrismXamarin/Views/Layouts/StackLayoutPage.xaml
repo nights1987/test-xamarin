@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismXamarin.Views.Layouts.StackLayoutPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Title}">
+             
+    <!--<StackLayout BackgroundColor="#ddd" Padding="32,26">
+        <Image Source="logo.png" HorizontalOptions="Center" HeightRequest="60" Margin="0,12" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Username:" VerticalOptions="Center" />
+            <Entry Placeholder="Username" PlaceholderColor="#110000" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Password:" VerticalOptions="Center" />
+            <Entry Placeholder="Password" IsPassword="true" PlaceholderColor="#110000" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <Button Text="Sign In" BackgroundColor="#43A047" TextColor="White" Margin="0,16" />
+    </StackLayout>-->
+    
+    <StackLayout Spacing="10" x:Name="layout">
+        <Button Text="StackLayout" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="Yellow" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="Green" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView Color="Red" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        <BoxView HeightRequest="75" Color="Blue" VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

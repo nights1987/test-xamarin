@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms" 
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                        xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms" 
+                        x:Class="PrismXamarin.App">
+    
+    <Application.Resources>
+        <!--
+        <ResourceDictionary x:Name="Light" Source="Assets/ThemeLight.xaml" />
+        <ResourceDictionary x:Name="Dark" Source="Assets/ThemeDark.xaml" />
+        -->
+        
+        <StyleSheet Source="Assets/styles.css" />
+        
+        <Color x:Key="PrimaryColor">#0f52ba</Color>
+        <Color x:Key="SuccessColor">#3abd43</Color>
+        <Color x:Key="WarningColor">#ff9209</Color>
+        <Color x:Key="ErrorColor">#db2b44</Color>
+        
+        <!--
+        <Style x:Key="baseButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+            <Setter Property="TextColor" Value="White" />
+        </Style>
+        -->
+    </Application.Resources>
+</prism:PrismApplication>

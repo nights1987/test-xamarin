@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrismXamarin.Views.BindingPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Title}">
+             
+    <StackLayout>
+        <StackLayout BindingContext="{Binding UserInfo}">
+            <Entry x:Name="txtFirstName" Placeholder="First Name" Text="{Binding FirstName}" />
+            <Entry x:Name="txtLastName" Placeholder="Last Name" Text="{Binding LastName}" />
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Submit" Command="{Binding OnSubmit}" StyleClass="btn-primary" />
+            <Button Text="Cancel" Command="{Binding OnCancel}" StyleClass="btn-primary"  />
+        </StackLayout>
+        
+        <Label BindingContext="{x:Reference txtFirstName}" Text="{Binding Text,  StringFormat='FirstName : {0}'}" />
+        <Label BindingContext="{x:Reference txtLastName}" Text="{Binding Text, StringFormat='LastName : {0}'}" />
+    </StackLayout> 
+</ContentPage>
